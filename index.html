@@ -4,12 +4,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Steven Universe | Fanpage</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       body {
         padding: 0;
         margin: 0;
-        background-color: aqua;
+        font-family: "Roboto", sans-serif;
+        overflow-x: hidden;
       }
 
       #background,
@@ -30,16 +39,30 @@
           #151531 90%
         );
       }
+
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #1f0946;
+;
+;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #492980;
+      }
+
+
     </style>
   </head>
   <body>
-
-      <div id="background">
-          <canvas id="stars"></canvas>
-        </div>
+    <div id="background">
+      <canvas id="stars"></canvas>
+    </div>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-    
   </body>
 </html>
 
