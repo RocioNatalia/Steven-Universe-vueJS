@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/Steven-Universe-vueJS',
+  publicPath: './Steven-Universe-vueJS',
 }
