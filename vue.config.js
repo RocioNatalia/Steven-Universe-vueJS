@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/Steven-Universe-vueJS',
-  assetsPublicPath: '/Steven-Universe-vueJS',
-  baseUrl : '/Steven-Universe-vueJS'
+  publicPath: process.env.NODE_ENV === 'production'
+  ? '/Steven-Universe-vueJS/'
+  : '/'
 }
