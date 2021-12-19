@@ -1,21 +1,28 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Characters from '@/pages/Characters'
-import Home from '@/pages/Home'
+import Vue from "vue";
+import Router from "vue-router";
 
-Vue.use(Router)
+import Home from "@/pages/Home";
+import Characters from "@/pages/Characters";
+import Contact from "@/pages/Contact";
+
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'Home',
+      path: "/",
+      name: "Home",
       component: Home
     },
     {
-      path: '/characters',
-      name: 'Characters',
+      path: "/characters",
+      name: "Characters",
       component: Characters
+    },
+    {
+      path: "/contact",
+      name: "Contact",
+      component: Contact
     }
   ]
-})
+});

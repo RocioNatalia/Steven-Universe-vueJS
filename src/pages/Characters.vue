@@ -1,22 +1,18 @@
 <template>
-  <div>
- 
-  Characters
+  <div class="characters">
+    Characters
+
+   
   </div>
 </template>
 
+
 <script>
-
 export default {
-  name : 'Characters'
-
-}
+  name: "Characters",
+};
 </script>
 
 <style scoped>
-div{
-height: 250px;
-background-color: royalblue;
-  color : white
-}
+
 </style>

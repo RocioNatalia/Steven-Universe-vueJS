@@ -3,32 +3,23 @@
     <div class="link-footer">
       Made with Vue JS
       <div
-        class="logo-vue"
-        v-bind:style="{ 'background-image': 'url(' + logovue + ')' }"
+        class="logo vue"
       ></div>
     </div>
     <a class="link-footer" href="https://github.com/RocioNatalia/Steven-Universe-vueJS" target="_blank">
       Repository
       <div
-        class="logo-vue"
-        v-bind:style="{ 'background-image': 'url(' + logogithub + ')' }"
-      ></div>
+        class="logo github">
+        </div>
     </a>
   </footer>
 </template>
 
 <script>
-import logovue from "../assets/vue-logo.png";
-import logogithub from "../assets/github-logo.png";
+
 
 export default {
   name: "Footer",
-  data() {
-    return {
-      logovue: logovue,
-      logogithub: logogithub,
-    };
-  },
 };
 </script>
 
@@ -61,11 +52,20 @@ footer {
   cursor: pointer;
 }
 
-.logo-vue {
-height: 25px;
-    width: 55px;
+.logo {
+    height: 25px;
+    width: 50px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.vue{
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg');
+}
+
+.github{
+    background-image: url('https://github.githubassets.com/images/modules/logos_page/Octocat.png');
+
 }
 </style>

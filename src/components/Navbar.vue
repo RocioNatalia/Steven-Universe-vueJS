@@ -1,40 +1,61 @@
 <template>
   <div class="navbar">
-    <div
+    <router-link
       class="logo"
+      to="/"
       v-bind:style="{ 'background-image': 'url(' + logo + ')' }"
-    ></div>
-    <nav class="navegation">
-      <a
+    ></router-link>
+
+    <nav class="navegation desktop">
+      <router-link
+        v-bind:style="{ margin: '0 20px' }"
         v-for="item in list"
         :key="item.description"
-        v-bind:style="{ margin: '0 10px' }"
-       href="item.url"
-        >{{ item.description }}</a
+        :to="item.url"
+        >{{ item.description }}</router-link
       >
     </nav>
+
+    <Slide
+      right
+      :closeOnNavigation="true"
+      :crossIcon="false"
+      class="navigation mobile"
+    >
+      <router-link
+        v-bind:style="{ margin: '0 20px' }"
+        v-for="item in list"
+        :key="item.description"
+        :to="item.url"
+        >{{ item.description }}</router-link
+      >
+    </Slide>
   </div>
 </template>
 
 <script>
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-sm.png";
+import { Slide } from "vue-burger-menu";
+
 export default {
   name: "Navbar",
+  components: {
+    Slide,
+  },
   data() {
     return {
       logo: logo,
       list: [
-        { url: "./", description: "Home" },
-        { url: "./", description: "Historia" },
-        { url: "./", description: "Personajes" },
-        { url: "./", description: "Contacto" },
+        { url: "/", description: "Home" },
+        { url: "/characters", description: "Personajes" },
+        { url: "/contact", description: "Contacto" },
       ],
     };
   },
 };
 </script>
 
-<style scoped>
+<style >
 .navbar {
   background: #10002b;
   color: #ffffff;
@@ -62,7 +83,11 @@ a {
   padding-bottom: 2px;
 }
 
-a:hover {
+.mobile {
+  display: none;
+}
+
+.navegation a:hover {
   color: #ffd249;
 }
 
@@ -77,7 +102,7 @@ a:hover {
   transition: width 0s ease, background 0.5s ease;
 }
 
-a:after {
+.navegation a:after {
   content: "";
   display: block;
   position: absolute;
@@ -89,22 +114,50 @@ a:after {
   transition: width 0.5s ease;
 }
 
-a:hover:before {
+.navegation a:hover:before {
   width: 100%;
   background: #ffd249;
   transition: width 0.5s ease;
 }
 
-a:hover:after {
+.navegation a:hover:after {
   width: 100%;
   background: transparent;
   transition: all 0s ease;
 }
 
 .logo {
-  width: 132px;
-  height: 50px;
+  width: 50px;
+  height: 45px;
   margin: 0 30px;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bm-menu {
+  background-color: #10002b;
+}
+.bm-burger-button {
+  height: 16px;
+  top: 26px;
+  width: 24px;
+  right: 24px !important;
+}
+.bm-burger-bars {
+  background-color: #ffffff;
+}
+
+@media only screen and (max-width: 700px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: initial;
+  }
+
+  .logo {
+    margin: 0 15px;
+  }
 }
 </style>
