@@ -3,13 +3,13 @@
     <div class="link-footer">
       Made with Vue JS
       <div
-        class="logo vue"
+        class="icon-logo vue"
       ></div>
     </div>
     <a class="link-footer" href="https://github.com/RocioNatalia/Steven-Universe-vueJS" target="_blank">
       Repository
       <div
-        class="logo github">
+        class="icon-logo github">
         </div>
     </a>
   </footer>
@@ -52,9 +52,9 @@ footer {
   cursor: pointer;
 }
 
-.logo {
+.icon-logo {
     height: 25px;
-    width: 50px;
+    width: 40px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;

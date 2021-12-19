@@ -30,14 +30,17 @@ export default {
 <style scoped>
 .socialmedia {
   display: flex;
+  position: fixed;
+  bottom: 25px;
+  right: 15px;
 }
 .media-icon {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  margin: 0 10px;
+  margin: 10px;
 }
 
 .instagram {
@@ -55,6 +58,11 @@ export default {
     height: 30px;
     width: 30px;
      margin: 0 5px;
+  }
+
+  .socialmedia {
+    flex-direction: column;
+     bottom: 40px;
   }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <router-link
-      class="logo"
+      class="logo desktop"
       to="/"
       v-bind:style="{ 'background-image': 'url(' + logo + ')' }"
     ></router-link>
@@ -17,10 +17,11 @@
     </nav>
 
     <Slide
+      v-bind:style="{ 'background-image': 'url(' + logo + ')' }"
       right
       :closeOnNavigation="true"
       :crossIcon="false"
-      class="navigation mobile"
+      class="logo navigation mobile"
     >
       <router-link
         v-bind:style="{ margin: '0 20px' }"
@@ -57,7 +58,7 @@ export default {
 
 <style >
 .navbar {
-  background: #10002b;
+  background: #0404048c;
   color: #ffffff;
   height: 65px;
   width: 100vw;
@@ -135,7 +136,7 @@ a {
 }
 
 .bm-menu {
-  background-color: #10002b;
+  background-color: #492980db;
 }
 .bm-burger-button {
   height: 16px;
@@ -144,10 +145,16 @@ a {
   right: 24px !important;
 }
 .bm-burger-bars {
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 @media only screen and (max-width: 700px) {
+
+  .navbar {
+  
+    justify-content: flex-end;
+  }
+
   .desktop {
     display: none;
   }

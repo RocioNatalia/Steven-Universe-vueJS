@@ -5,9 +5,7 @@
         <router-view />
 
     </transition>
-     <div class="social-media">
       <Socialmedia> </Socialmedia>
-    </div>
     <Footer/>
   </div>
 </template>
@@ -30,12 +28,6 @@ export default {
 <style>
 #app {
   margin-top: 70px;
-}
-
-.social-media {
-  position: absolute;
-  bottom: 35px;
-  right: 15px;
 }
 
 /** TRANSITIONS **/
