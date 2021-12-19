@@ -25,12 +25,12 @@ export default {
 
 <style scoped>
 footer {
-  height: 120px;
+  height: 20vh;
   width: 100vw;
   background: #10002b;
   color: #ffffff;
   position: absolute;
-  bottom: -100px;
+  bottom: -20vh;
   display: flex;
   align-items: center;
   justify-content: center;

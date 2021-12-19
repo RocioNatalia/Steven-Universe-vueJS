@@ -60,7 +60,8 @@ export default {
 .navbar {
   background: #0404048c;
   color: #ffffff;
-  height: 65px;
+  height:10vh;
+  max-height: 70px;
   width: 100vw;
   position: absolute;
   top: 0;

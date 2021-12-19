@@ -48,7 +48,7 @@ export default {
 <style scoped>
 .bottom-image {
   width: 100vw;
-  height: calc(100vh - 75px);
+  height: 90vh;
   position: absolute;
   top: 75px;
 

@@ -29,10 +29,10 @@ export default {
 
 <style scoped>
 .home {
-  height: calc(100vh - 100px);
+  height: 70vh;
   display: flex;
   position: absolute;
-  top: 65px;
+  top: 10vh;
 
   flex-direction: column;
   align-items: center;
