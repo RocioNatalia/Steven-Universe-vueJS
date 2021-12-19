@@ -47,23 +47,23 @@ export default {
 
 <style scoped>
 .bottom-image {
+  display: flex;
+  height: 100vh;
   width: 100vw;
-  height: 90vh;
-  position: absolute;
-  top: 75px;
+  justify-content: center;
 
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
 }
 
 .form-container {
-  margin-top: 2vh;
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding-top: 10vh;
+  width: 90vw;
+  max-width: 500px;
 }
 
 .basic-button {
