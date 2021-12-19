@@ -27,7 +27,10 @@ export default {
 
 <style>
 #app {
-  margin-top: 70px;
+}
+
+router-view{
+  border: solid
 }
 
 /** TRANSITIONS **/

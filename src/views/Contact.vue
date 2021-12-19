@@ -48,7 +48,10 @@ export default {
 <style scoped>
 .bottom-image {
   width: 100vw;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 75px);
+  position: absolute;
+  top: 75px;
+
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -74,16 +77,16 @@ export default {
   background-color: #ffd249;
 }
 
-.basic-button:hover{
+.basic-button:hover {
   cursor: pointer;
   border: solid 2px #d3a827;
   padding: 6px;
 }
 
 @media only screen and (max-width: 700px) {
-
   .form-container {
     width: 85vw;
+    margin-top: 5vh;
   }
 }
 </style>
