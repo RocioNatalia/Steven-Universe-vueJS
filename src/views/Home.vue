@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 .home {
-  height: 80vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -49,7 +49,7 @@ module.exports = {
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'Steven-Universe-vueJS/static',
+    assetsSubDirectory: './static',
     assetsPublicPath: '/',
 
     /**

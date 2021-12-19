@@ -48,7 +48,7 @@ export default {
 <style scoped>
 .bottom-image {
   width: 100vw;
-  height: 95vh;
+  height: calc(100vh - 100px);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -81,9 +81,6 @@ export default {
 }
 
 @media only screen and (max-width: 700px) {
-  .bottom-image {
-    height: 85vh;
-  }
 
   .form-container {
     width: 85vw;
