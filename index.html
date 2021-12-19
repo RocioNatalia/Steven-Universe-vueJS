@@ -1,75 +1,46 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Steven Universe | Fanpage</title><link rel=icon type=image/x-icon href=/static/favicon.ico><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500&display=swap" rel=stylesheet>/><style>body {
+        padding: 0;
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        overflow-x: hidden;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none;
+      }
 
-<head>
-  <meta charset=utf-8>
-  <meta name=viewport content="width=device-width,initial-scale=1">
-  <title>Steven Universe | Fanpage</title>
-  <link rel=icon type=image/x-icon href=/Steven-Universe-vueJS/static/favicon.ico>
-  <link rel=preconnect href=https://fonts.googleapis.com>
-  <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500&display=swap" rel=stylesheet>/>
-  <style>
-    body {
-      padding: 0;
-      margin: 0;
-      font-family: "Roboto", sans-serif;
-      overflow-x: hidden;
-      -webkit-touch-callout: none;
-      /* iOS Safari */
-      -webkit-user-select: none;
-      /* Safari */
-      -khtml-user-select: none;
-      /* Konqueror HTML */
-      -moz-user-select: none;
-      /* Old versions of Firefox */
-      -ms-user-select: none;
-      /* Internet Explorer/Edge */
-      user-select: none;
-    }
+      #background,
+      #stars {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -9999;
+      }
 
-    #background,
-    #stars {
-      width: 100%;
-      height: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -9999;
-    }
-
-    #background {
-      background: radial-gradient(at bottom right,
+      #background {
+        background: radial-gradient(
+          at bottom right,
           #404be3 25%,
           #421a92 55%,
-          #151531 90%);
-    }
+          #151531 90%
+        );
+      }
 
-    ::-webkit-scrollbar {
-      width: 5px;
-    }
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
 
-    ::-webkit-scrollbar-track {
-      background: #1f0946;
-    }
+      ::-webkit-scrollbar-track {
+        background: #1f0946;
+      }
 
-    ::-webkit-scrollbar-thumb {
-      background: #492980;
-    }
-  </style>
-  <link href=/Steven-Universe-vueJS/static/css/app.15ff8c237084baf19f2f949a5266479e.css rel=stylesheet>
-</head>
-
-<body>
-  <div id=background><canvas id=stars></canvas></div>
-  <div id=app></div>
-  <script type=text/javascript src=/Steven-Universe-vueJS/static/js/manifest.2ae2e69a05c33dfc65f8.js></script>
-  <script type=text/javascript src=/Steven-Universe-vueJS/static/js/vendor.fea25abf05e1b6ab6eaa.js></script>
-  <script type=text/javascript src=/Steven-Universe-vueJS/static/js/app.74626b38dbc39438debd.js></script>
-</body>
-
-</html>
-<script>ready(function () {
+      ::-webkit-scrollbar-thumb {
+        background: #492980;
+      }</style><link href=/static/css/app.a61269b109024657c765892469e951d9.css rel=stylesheet></head><body><div id=background><canvas id=stars></canvas></div><div id=app></div><script type=text/javascript src=/static/js/manifest.2ae2e69a05c33dfc65f8.js></script><script type=text/javascript src=/static/js/vendor.fea25abf05e1b6ab6eaa.js></script><script type=text/javascript src=/static/js/app.c953e37bee34397a7a13.js></script></body></html><script>ready(function() {
     initializeBackground();
   });
 
@@ -80,7 +51,7 @@
     canvas = document.getElementById("stars");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    window.addEventListener("resize", function () {
+    window.addEventListener("resize", function() {
       if (Date.now() - lastResizeTime < resizeCooldown && resizeTimeout) {
         clearTimeout(resizeTimeout);
         delete resizeTimeout;
@@ -88,7 +59,7 @@
 
       lastResizeTime = Date.now();
       canvas.style.display = "none";
-      resizeTimeout = setTimeout(function () {
+      resizeTimeout = setTimeout(function() {
         fadeIn(canvas, 500);
         initializeStars();
       }, 500);
@@ -115,7 +86,7 @@
     this.y = rand(window.innerHeight);
   }
 
-  Star.prototype.animate = function (delta) {
+  Star.prototype.animate = function(delta) {
     this.x += this.speed * delta;
     this.y -= this.speed * delta;
     if (this.y < 0) {
@@ -176,7 +147,7 @@
     element.style.display = "block";
 
     var startTime = Date.now();
-    var tick = function () {
+    var tick = function() {
       var newOpacity = (Date.now() - startTime) / duration;
       if (newOpacity > 1) {
         newOpacity = 1;
