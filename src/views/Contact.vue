@@ -88,5 +88,8 @@ export default {
     width: 85vw;
     margin-top: 5vh;
   }
+  .bottom-image{
+    height: 90vh;
+  }
 }
 </style>
