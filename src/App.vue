@@ -47,17 +47,4 @@ transform: translateX(-10px);
 opacity: 0;
 }
 
-.fade-enter{
-opacity: 0;
-}
-
-.fade-enter-active ,
-.fade-leave-active{
-transition: all 0.5s ease;
-}
-
-.fade-leave-to{
-opacity: 0;
-}
-
 </style>

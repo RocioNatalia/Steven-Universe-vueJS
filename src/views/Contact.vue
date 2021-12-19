@@ -59,7 +59,7 @@ export default {
 }
 
 .form-container {
-  margin-top: 5vh;
+  margin-top: 2vh;
   width: 400px;
 }
 
@@ -82,12 +82,11 @@ export default {
 
 @media only screen and (max-width: 700px) {
   .bottom-image {
-    height: 90vh;
+    height: 85vh;
   }
 
   .form-container {
-    margin-top: 50px;
-    width: 90vw;
+    width: 85vw;
   }
 }
 </style>
